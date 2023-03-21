@@ -90,7 +90,7 @@ int main() {
          break;
 
       default:
-         printf("Error! Invalid operator.");
+         printf("Error! Invalid operator!");
    }
 
 }
