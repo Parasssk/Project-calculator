@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <math.h>
+
 int main() {
    char operator;
    double num1, num2, result;
 
-   printf("Enter an operator (+, -, *, / ");
+   printf("Enter an operator (+, -, *, /, %%, ^, s): ");
    scanf("%c", &operator);
 
    switch(operator) {
@@ -19,23 +20,21 @@ int main() {
          scanf("%lf", &num2);
 
          switch(operator) {
-//   this is add operator
             case '+':
                result = num1 + num2;
                printf("%.2lf + %.2lf = %.2lf", num1, num2, result);
                break;
-//    this is subtract operator
 
             case '-':
                result = num1 - num2;
                printf("%.2lf - %.2lf = %.2lf", num1, num2, result);
                break;
-//     this is multiplication operator
+
             case '*':
                result = num1 * num2;
                printf("%.2lf * %.2lf = %.2lf", num1, num2, result);
                break;
-//     this is division operator
+
             case '/':
                if (num2 == 0) {
                   printf("Error! Division by zero is not allowed.");
@@ -45,18 +44,13 @@ int main() {
                }
                break;
          }
-        
-   }
-
-   return 0;
-   }
          break;
 
       case '%':
          printf("Enter the first number: ");
          scanf("%lf", &num1);
 
-         printf("Enter the second numberr: ");
+         printf("Enter the second number: ");
          scanf("%lf", &num2);
 
          if (fmod(num1, num2) == 0) {
@@ -90,7 +84,8 @@ int main() {
          break;
 
       default:
-         printf("Error. Invalid operator!");
-   }
+         printf("Error! Invalid operator.");
+   }
 
+   return 0;
 }
