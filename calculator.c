@@ -19,21 +19,23 @@ int main() {
          scanf("%lf", &num2);
 
          switch(operator) {
+//   this is add operator
             case '+':
                result = num1 + num2;
                printf("%.2lf + %.2lf = %.2lf", num1, num2, result);
                break;
+//    this is subtract operator
 
             case '-':
                result = num1 - num2;
                printf("%.2lf - %.2lf = %.2lf", num1, num2, result);
                break;
-
+//     this is multiplication operator
             case '*':
                result = num1 * num2;
                printf("%.2lf * %.2lf = %.2lf", num1, num2, result);
                break;
-
+//     this is division operator
             case '/':
                if (num2 == 0) {
                   printf("Error! Division by zero is not allowed.");
